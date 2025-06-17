@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botella Inteligente H2O+</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background: linear-gradient(90deg, #2980b9, #6dd5fa);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      width: 100%;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem;
+    }
+    .slider {
+      position: relative;
+      overflow: hidden;
+      height: 280px;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 100%;
+    }
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+    .slider-button:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    h2, h3, h4 { color: #2e86de; text-align: center; }
+    ul { padding-left: 1.5rem; }
+    .review, .faq-item {
+      background: white;
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .buy-button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(90deg, #27ae60, #2ecc71);
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      border-radius: 32px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .buy-button:hover {
+      background: linear-gradient(90deg, #219150, #27c76d);
+    }
+    footer {
+      background: #2e86de;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      width: 100%;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Botella Inteligente H2O+</h1>
+    <p>Innovación, salud y estilo en una sola botella</p>
+  </header>
+  <div class="container">
+    <div class="slider" id="slider">
+      <div class="slides" id="slides">
+        <img src="https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2024/03/05/65e733cf62c03.r_d.314-203-19108.png" />
+        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/HPAS2_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90" />
+        <img src="https://www.marketresearchintellect.com/images/blogs/smart-hydration-solutions-the-future-of-water-bottles-in-machinery-equipment.webp" />
+        <img src="https://www.israeleconomico.com/wp-content/uploads/2023/05/BOTELLA-INTELIGENTE-1-1134x658.jpg" />
+      </div>
+      <button class="slider-button prev" id="prevBtn">‹</button>
+      <button class="slider-button next" id="nextBtn">›</button>
+    </div>
+
+    <h2>¿Por qué elegir la H2O+?</h2>
+    <p style="text-align:center">La botella inteligente H2O+ es la revolución para quienes buscan mantenerse hidratados con estilo. Con sensores integrados, alerta de hidratación y conexión con tu móvil, es tu nueva aliada saludable.</p>
+
+    <h3>Características técnicas:</h3>
+    <ul>
+      <li>Capacidad: 650 ml</li>
+      <li>Conexión Bluetooth</li>
+      <li>App Android/iOS</li>
+      <li>Batería recargable: 10 días</li>
+      <li>Material: acero inoxidable</li>
+      <li>Luz LED de alerta</li>
+    </ul>
+
+    <h3>Precio:</h3>
+    <p style="text-align:center"><strong>49,99 €</strong> (envío gratis en España)</p>
+
+    <h2>Reseñas de clientes</h2>
+    <div class="review">
+      <strong>María G.</strong>
+      <p>"Me recuerda cuándo beber. ¡Excelente diseño!"</p>
+    </div>
+    <div class="review">
+      <strong>Juan P.</strong>
+      <p>"Funciona perfecto. Muy recomendable."</p>
+    </div>
+    <div class="review">
+      <strong>Ana R.</strong>
+      <p>"He mejorado mucho mi hábito de tomar agua."</p>
+    </div>
+
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h4>¿Cómo se carga?</h4>
+      <p>Con un cable USB incluido.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Apta para bebidas calientes?</h4>
+      <p>Sí, hasta 70°C.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Se puede lavar en lavavajillas?</h4>
+      <p>No, sólo a mano.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Tiene garantía?</h4>
+      <p>Sí, 1 año por defectos de fábrica.</p>
+    </div>
+
+    <button class="buy-button">Comprar ahora</button>
+  </div>
+  <footer>
+    &copy; 2025 Botella Inteligente H2O+. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    function showSlide(index) {
+      if (index >= totalSlides) slideIndex = 0;
+      else if (index < 0) slideIndex = totalSlides - 1;
+      else slideIndex = index;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    nextBtn.onclick = () => {
+      showSlide(slideIndex + 1);
+      resetTimer();
+    };
+
+    prevBtn.onclick = () => {
+      showSlide(slideIndex - 1);
+      resetTimer();
+    };
+
+    let autoSlide = setInterval(() => {
+      showSlide(slideIndex + 1);
+    }, 5000);
+
+    function resetTimer() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(() => {
+        showSlide(slideIndex + 1);
+      }, 5000);
+    }
+
+    showSlide(slideIndex);
+  </script>
+</body>
+</html>
